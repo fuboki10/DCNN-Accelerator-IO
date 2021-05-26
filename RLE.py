@@ -37,8 +37,12 @@ def compress_image(image : str):
 
     img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
+    img = cv2.copyMakeBorder(img.copy(),2,2,2,2,cv2.BORDER_CONSTANT,value=[0,0,0])
+
     # get height and width 
     h, w = img.shape
+
+    print(h,w)
 
     x = img.flatten()
     a = bitarray()

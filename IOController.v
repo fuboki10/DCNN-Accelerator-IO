@@ -14,12 +14,9 @@ module IOController (clk, rst, interrupt, load, cnn, done, Din, Dout, memAdress,
 
   wire DMA_en;
 
-  wire [15: 0] decompressorInput;
   wire [15: 0] decompressorOutput;
 
-  IOInterface io_inter(clk, Din, Dout, decompressorInput, Results, load);
-
-  Decompressor decom(clk, rst, decompressorInput, decompressorOutput, load, interrupt, done, DMA_en);
+  Decompressor decom(clk, rst, Din, decompressorOutput, load, interrupt, done, DMA_en);
 
   DMA dma(clk, rst, DMA_en, decompressorOutput, memData,memAdress);  
 

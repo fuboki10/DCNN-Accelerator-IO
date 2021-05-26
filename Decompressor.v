@@ -29,16 +29,15 @@ always @(posedge interrupt) begin
     done = 1;
     DMA_en = 0;
     loadinterrupt = load;
-    $display("this is the load %b",load)
+    //$display("this is the load %b",load);
   end
   always @(posedge clk ) begin
     // reset signals
-    
     DMA_en = 0;
       
     if (loadinterrupt ) begin
       done = 0;
-      $display("current bit is equal to %b", Din);
+      //$display("current bit is equal to %b", Din);
       if (firstTime) begin
         firstTime = 0;
         currentBit = Din[0];

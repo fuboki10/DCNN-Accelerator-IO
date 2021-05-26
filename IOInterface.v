@@ -1,16 +1,16 @@
-
-module IOInterface(clk,DataIO,Decompressor,Results,read);
-    inout  [15:0] DataIO;
-    output  [15:0] Decompressor;
-    input  [15:0] Results;
-    input read;
+module IOInterface(clk,Din,Dout,decompressorInput,Results,load);
+    input [15:0] Din;
+    output reg [3:0] Dout;
+    output reg  [15:0] decompressorInput;
+    input [3:0] Results;
+    input load;
     input clk;
     always @(posedge clk) begin
-        if(read ==0)begin
-             DataIO = Results;
+        if(load)begin
+            decompressorInput = Din;
         end
         else begin
-             Decompressor =DataIO;
+            Dout = Results;
         end
     end
 endmodule

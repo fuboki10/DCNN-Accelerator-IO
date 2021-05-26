@@ -1,4 +1,4 @@
-module GPU(clk, rst, interrupt, load, cnn, done, data); 
+module GPU(clk, rst, interrupt, load, cnn, done, data,datain); 
 integer file, r;
 output reg clk; 
 output reg rst;
@@ -7,7 +7,7 @@ output reg load;
 output reg cnn;
 input done;
 output reg [15:0] data; 
-
+input [3:0] datain;
 integer stage = 0; // 0 => CNN, 1 => Image, 2 => Done
 integer commandSent = 0; 
   
@@ -18,6 +18,7 @@ always #(CLOCK_PERIOD/2) clk = ~clk;
 
 initial begin 
   // send reset signal
+    clk = 0;
   rst = 1;
   #CLOCK_PERIOD;
   rst = 0;

@@ -45,7 +45,20 @@ def compress_image(image : str):
 
     for i in x:
         j = int(i)
-        a.extend(int2ba(j, length=8))
+        norm = j / 255
+        bt = bitarray()
+                
+        vi = abs(int(norm))
+
+        vf = abs(int((norm - vi) * 10000))
+        
+        if vf >= 2048:
+            vf = vf // 10
+
+        bt.extend(int2ba(vi, length=5))
+        bt.extend(int2ba(vf, length=11))
+
+        a.extend(bt)
 
     bitList = a.tolist()
 

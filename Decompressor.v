@@ -17,7 +17,7 @@ module Decompressor (clk, rst, Din, Dout, load, interrupt, done, DMA_en);
     counter = 0;
     firstTime = 1;
     index = 0;
-    done = 0;
+    done = 1;
     DMA_en = 0;
   end
 

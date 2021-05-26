@@ -18,7 +18,7 @@ always #(CLOCK_PERIOD/2) clk = ~clk;
 
 initial begin 
   // send reset signal
-    clk = 0;
+  clk = 0;
   rst = 1;
   #CLOCK_PERIOD;
   rst = 0;

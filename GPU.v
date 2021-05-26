@@ -30,6 +30,7 @@ end // initial
   
 always @(negedge clk) begin
   // CNN Stage
+  
   if (stage == 0) begin
     if (!commandSent) begin
       cnn = 1; // send cnn signal

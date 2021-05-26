@@ -7,31 +7,44 @@ module Decompressor (clk, rst, Din, Dout, load, interrupt, done, DMA_en);
   input interrupt;
   output reg done;
   output reg DMA_en;
-
+  integer loadinterrupt;
   integer counter; // bit counter (when 16 bit send)
   reg currentBit; // first bit value
   integer firstTime; 
   integer index;  // index in Dout
 
-  always @(posedge rst or posedge interrupt) begin
+  always @(posedge rst ) begin
     counter = 0;
     firstTime = 1;
     index = 0;
     done = 1;
     DMA_en = 0;
-  end
+    loadinterrupt = 0;
 
+  end
+always @(posedge interrupt) begin
+    counter = 0;
+    firstTime = 1;
+    index = 0;
+    done = 1;
+    DMA_en = 0;
+    loadinterrupt = load;
+    $display("this is the load %b",load)
+  end
   always @(posedge clk ) begin
     // reset signals
-    done = 0;
+    
     DMA_en = 0;
       
-    if (load) begin
+    if (loadinterrupt ) begin
+      done = 0;
+      $display("current bit is equal to %b", Din);
       if (firstTime) begin
         firstTime = 0;
         currentBit = Din[0];
         // TODO
         // send done signal
+   
         done = 1;
       end else begin
         

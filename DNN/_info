@@ -7,14 +7,14 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-dE:/kollea/vlsi
+Z0 dE:/kollea/vlsi/DCNN-Accelerator-IO
 vDecompressor
-Z0 !s110 1622058088
+Z1 !s110 1622059852
 !i10b 1
 !s100 VLhW;EgnO6_e5nz@jjo3e1
 IG1>0@;hmc43P08SeY40Rb3
-Z1 VDg1SIo80bB@j0V0VzS_@n1
-Z2 dE:/kollea/vlsi/DCNN-Accelerator-IO
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
 Z3 w1622056926
 8E:/kollea/vlsi/DCNN-Accelerator-IO/Decompressor.v
 FE:/kollea/vlsi/DCNN-Accelerator-IO/Decompressor.v
@@ -23,61 +23,61 @@ Z4 OV;L;10.4d;61
 r1
 !s85 0
 31
-Z5 !s108 1622058088.000000
+Z5 !s108 1622059852.000000
 !s107 E:/kollea/vlsi/DCNN-Accelerator-IO/Decompressor.v|
 !s90 -reportprogress|300|-work|DNN|-stats=none|E:/kollea/vlsi/DCNN-Accelerator-IO/Decompressor.v|
 !i113 1
 Z6 o-work DNN
 n@decompressor
 vDMA
-R0
+R1
 !i10b 1
 !s100 _a6d=jogIab75F6Ug;GD93
-IZ8o?lz8NBG]Z?j^BMN@n_3
-R1
+IY0L]U??5WjCHLCXCPm^542
 R2
+R0
 R3
-8E:/kollea/vlsi/DCNN-Accelerator-IO/DMA.v
-FE:/kollea/vlsi/DCNN-Accelerator-IO/DMA.v
+8E:\kollea\vlsi\DCNN-Accelerator-IO\DMA.v
+FE:\kollea\vlsi\DCNN-Accelerator-IO\DMA.v
 L0 2
 R4
 r1
 !s85 0
 31
 R5
-!s107 E:/kollea/vlsi/DCNN-Accelerator-IO/DMA.v|
-!s90 -reportprogress|300|-work|DNN|-stats=none|E:/kollea/vlsi/DCNN-Accelerator-IO/DMA.v|
+!s107 E:\kollea\vlsi\DCNN-Accelerator-IO\DMA.v|
+!s90 -reportprogress|300|-work|DNN|-stats=none|E:\kollea\vlsi\DCNN-Accelerator-IO\DMA.v|
 !i113 1
 R6
 n@d@m@a
 vGPU
-R0
+R1
 !i10b 1
 !s100 iIjUiUVQ>2`Fo88Ae0dMV1
-IcMmmQIFgY@K7V86ZK01]P2
-R1
+INE@TGE6:RW1nHYgi2jgIZ3
 R2
+R0
 w1622058078
-8E:/kollea/vlsi/DCNN-Accelerator-IO/GPU.v
-FE:/kollea/vlsi/DCNN-Accelerator-IO/GPU.v
+8E:\kollea\vlsi\DCNN-Accelerator-IO\GPU.v
+FE:\kollea\vlsi\DCNN-Accelerator-IO\GPU.v
 L0 1
 R4
 r1
 !s85 0
 31
 R5
-!s107 E:/kollea/vlsi/DCNN-Accelerator-IO/GPU.v|
-!s90 -reportprogress|300|-work|DNN|-stats=none|E:/kollea/vlsi/DCNN-Accelerator-IO/GPU.v|
+!s107 E:\kollea\vlsi\DCNN-Accelerator-IO\GPU.v|
+!s90 -reportprogress|300|-work|DNN|-stats=none|E:\kollea\vlsi\DCNN-Accelerator-IO\GPU.v|
 !i113 1
 R6
 n@g@p@u
 vIOController
-R0
+R1
 !i10b 1
 !s100 AWlfng<P2I_GcVAgzd01c3
 I_O1n=k`E_^NeEMgk9]g_O2
-R1
 R2
+R0
 R3
 8E:/kollea/vlsi/DCNN-Accelerator-IO/IOController.v
 FE:/kollea/vlsi/DCNN-Accelerator-IO/IOController.v
@@ -93,12 +93,12 @@ R5
 R6
 n@i@o@controller
 vIOInterface
-R0
+R1
 !i10b 1
 !s100 OQQzR24f=]oCbJdO7V91g3
 I5`Z_EzQ[J?mJ[mCC5ThH=2
-R1
 R2
+R0
 R3
 8E:/kollea/vlsi/DCNN-Accelerator-IO/IOInterface.v
 FE:/kollea/vlsi/DCNN-Accelerator-IO/IOInterface.v
@@ -114,13 +114,13 @@ R5
 R6
 n@i@o@interface
 vtb_GPU
-R0
-!i10b 1
-!s100 HnMSai`DVINP^o2GQ?:311
-IE]8gM0KZKGIO_3hVjYcK63
 R1
+!i10b 1
+!s100 Tdh18lSDXc6aY@gBgR<fP2
+I0bnJ?AgA44n1jj1C[i[0E0
 R2
-w1622057481
+R0
+w1622059846
 8E:/kollea/vlsi/DCNN-Accelerator-IO/testBench.v
 FE:/kollea/vlsi/DCNN-Accelerator-IO/testBench.v
 L0 1

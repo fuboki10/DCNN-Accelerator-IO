@@ -6,12 +6,14 @@ def writeLine(line, counter, file):
     index = doubleQ + str(counter)+doubleQ
     number = doubleQ+line+doubleQ+'\n'
     file.writelines(index + ': '+ number)
-out = open("sample.txt", "w")
-out.write('{\n')
-dirPath =  './Filters - Weights - Biases'
+
+out = open("cnn.json", "w")
+
+dirPath =  './files'
 files = os.listdir(dirPath)
 counter = 1
 dict = {}
+
 for file in files:
     f = open(dirPath + '/' +file, 'r')
     lines = f.readlines()
@@ -19,13 +21,9 @@ for file in files:
         line = line.replace("\n", "")
         if line == "" or line == "----------------------":
             continue
-        dict[counter] = line
         elements = line.split(" ")
         for element in elements:
-            writeLine(element, counter, out)
+            dict[counter] = float(element)
             counter += 1
-out.write('}')
 
-# jsonObj = json.dumps(dict)
-# with open("sample.txt", "w") as outfile:
-#     json.dump(outfile, dict)
+json.dump(dict, out)

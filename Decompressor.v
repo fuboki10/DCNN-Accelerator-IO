@@ -9,7 +9,7 @@ module Decompressor (clk, rst, Din, Dout, load, interrupt, done, DMA_en);
   output reg DMA_en;
 
   integer counter; // bit counter (when 16 bit send)
-  integer currentBit; // first bit value
+  reg currentBit; // first bit value
   integer firstTime; 
   integer index;  // index in Dout
 

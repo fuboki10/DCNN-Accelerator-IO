@@ -21,6 +21,6 @@ module IOController (clk, rst, interrupt, load, cnn, done, Din, Dout, memAdress,
 
   Decompressor decom(clk, rst, decompressorInput, decompressorOutput, load, interrupt, done, DMA_en);
 
-  DMA dma(clk, rst, DMA_en, decompressorOutput, memData,0,memAdress);  
+  DMA dma(clk, rst, DMA_en, decompressorOutput, memData,memAdress);  
 
 endmodule

@@ -8,7 +8,7 @@ from bitarray.util import int2ba
 
 def decompress():
     a = bitarray()
-    with open('compressed', 'rb') as fh:
+    with open('compressedCNN', 'rb') as fh:
         a.fromfile(fh)
     # read first bit value
     for i in range(0, 3):
@@ -25,11 +25,18 @@ def rlencode(x, dropna=False):
         return (np.array([], dtype=int), 
                 np.array([], dtype=int), 
                 np.array([], dtype=x.dtype))
+    lengths = []
 
-    starts = np.r_[0, where(~np.isclose(x[1:], x[:-1], equal_nan=True)) + 1]
-    lengths = np.diff(np.r_[starts, n])
-    values = x[starts]
-    return starts, lengths, values
+    cnt = 1
+    for i in range(1, n):
+        if x[i] != x[i - 1]:
+            lengths.append(cnt)
+            cnt = 0
+
+        cnt = cnt + 1
+    lengths.append(cnt)
+
+    return np.array(lengths)
 
 def compress_image(image : str):
     # compress image
@@ -40,9 +47,9 @@ def compress_image(image : str):
     img = cv2.copyMakeBorder(img.copy(),2,2,2,2,cv2.BORDER_CONSTANT,value=[0,0,0])
 
     # get height and width 
-    h, w = img.shape
+    # h, w = img.shape
 
-    print(h,w)
+    # print(h,w)
 
     x = img.flatten()
     a = bitarray()
@@ -67,7 +74,7 @@ def compress_image(image : str):
     bitList = a.tolist()
 
     # print(len(x)*8, ' = ', len(bitList))
-    starts, lengths, values = rlencode(bitList)
+    lengths = rlencode(bitList)
     # print(max(lengths))
     # print("lengths: ", len(lengths))
 
@@ -120,7 +127,7 @@ def compress_cnn(file : str):
 
     bitList = a.tolist()
 
-    starts, lengths, values = rlencode(bitList)
+    lengths = rlencode(bitList)
 
     f = open('./compressedCNN', 'wb')
 
@@ -148,3 +155,6 @@ def compress_cnn(file : str):
 
 compress_cnn('./cnn.json')
 compress_image('./train_0.bmp')
+
+
+# decompress();

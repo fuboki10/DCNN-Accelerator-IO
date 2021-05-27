@@ -1,4 +1,4 @@
-module IOController (clk, rst, interrupt, load, cnn, done, Din, Dout, memAdress, memData);
+module IOController (clk, rst, interrupt, load, cnn, done, Din, Dout, memAdress, memData,DMA_en);
   input clk;
   input rst;
   input interrupt;
@@ -10,9 +10,9 @@ module IOController (clk, rst, interrupt, load, cnn, done, Din, Dout, memAdress,
   output wire [15: 0] memAdress;
   output wire [15: 0] memData;
 
-  reg [3: 0] Results; // Change this later
+  output  DMA_en;
 
-  wire DMA_en;
+  reg [3: 0] Results; // Change this later
 
   wire [15: 0] decompressorOutput;
 

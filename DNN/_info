@@ -9,88 +9,88 @@ z2
 cModel Technology
 Z0 dE:/kollea/vlsi/DCNN-Accelerator-IO
 vDecompressor
-Z1 !s110 1622064255
+Z1 !s110 1622120672
 !i10b 1
-!s100 e^[^z^98lET=7mF_=_^9R2
-I314WhIBTgFmMkaHAQjbj@1
+!s100 XVY]GBUZ`Loi`hK4:^z?b1
+I@Q;YnG[AUHN7B`2zXP:;c1
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1622064251
+Z3 w1622119127
 8E:/kollea/vlsi/DCNN-Accelerator-IO/Decompressor.v
 FE:/kollea/vlsi/DCNN-Accelerator-IO/Decompressor.v
 L0 1
-Z3 OV;L;10.4d;61
+Z4 OV;L;10.4d;61
 r1
 !s85 0
 31
-Z4 !s108 1622064255.000000
+Z5 !s108 1622120672.000000
 !s107 E:/kollea/vlsi/DCNN-Accelerator-IO/Decompressor.v|
 !s90 -reportprogress|300|-work|DNN|-stats=none|E:/kollea/vlsi/DCNN-Accelerator-IO/Decompressor.v|
 !i113 1
-Z5 o-work DNN
+Z6 o-work DNN
 n@decompressor
 vDMA
 R1
 !i10b 1
 !s100 N=NiAhU=lhgEde<0Q_Nz@2
-INJ<5`fG9b5_P_9lXzhmNC1
+IRG9gV^1_A33@XVA=GIcW52
 R2
 R0
 w1622062318
-8E:\kollea\vlsi\DCNN-Accelerator-IO\DMA.v
-FE:\kollea\vlsi\DCNN-Accelerator-IO\DMA.v
+8E:/kollea/vlsi/DCNN-Accelerator-IO/DMA.v
+FE:/kollea/vlsi/DCNN-Accelerator-IO/DMA.v
 L0 2
-R3
+R4
 r1
 !s85 0
 31
-R4
-!s107 E:\kollea\vlsi\DCNN-Accelerator-IO\DMA.v|
-!s90 -reportprogress|300|-work|DNN|-stats=none|E:\kollea\vlsi\DCNN-Accelerator-IO\DMA.v|
-!i113 1
 R5
+!s107 E:/kollea/vlsi/DCNN-Accelerator-IO/DMA.v|
+!s90 -reportprogress|300|-work|DNN|-stats=none|E:/kollea/vlsi/DCNN-Accelerator-IO/DMA.v|
+!i113 1
+R6
 n@d@m@a
 vGPU
 R1
 !i10b 1
-!s100 iIjUiUVQ>2`Fo88Ae0dMV1
-INE@TGE6:RW1nHYgi2jgIZ3
+!s100 ^5`Si29jMDJEm2S197N=]0
+IF25e7zG2S91FT@26Jd^1T2
 R2
 R0
-w1622063044
-8E:\kollea\vlsi\DCNN-Accelerator-IO\GPU.v
-FE:\kollea\vlsi\DCNN-Accelerator-IO\GPU.v
-L0 1
 R3
+8E:/kollea/vlsi/DCNN-Accelerator-IO/GPU.v
+FE:/kollea/vlsi/DCNN-Accelerator-IO/GPU.v
+L0 1
+R4
 r1
 !s85 0
 31
-R4
-!s107 E:\kollea\vlsi\DCNN-Accelerator-IO\GPU.v|
-!s90 -reportprogress|300|-work|DNN|-stats=none|E:\kollea\vlsi\DCNN-Accelerator-IO\GPU.v|
-!i113 1
 R5
+!s107 E:/kollea/vlsi/DCNN-Accelerator-IO/GPU.v|
+!s90 -reportprogress|300|-work|DNN|-stats=none|E:/kollea/vlsi/DCNN-Accelerator-IO/GPU.v|
+!i113 1
+R6
 n@g@p@u
 vIOController
 R1
 !i10b 1
-!s100 OJS2C2FKR=zk0V0@ldQaT2
-Ig1oGARI;WeGF3J;iJETzz1
+!s100 _zW<CLeIm]_d@Ok614Vc60
+IZhBN?[6Ae7^]:O^<IEDf93
 R2
 R0
-w1622062172
+w1622120388
 8E:/kollea/vlsi/DCNN-Accelerator-IO/IOController.v
 FE:/kollea/vlsi/DCNN-Accelerator-IO/IOController.v
 L0 1
-R3
+R4
 r1
 !s85 0
 31
-R4
+R5
 !s107 E:/kollea/vlsi/DCNN-Accelerator-IO/IOController.v|
 !s90 -reportprogress|300|-work|DNN|-stats=none|E:/kollea/vlsi/DCNN-Accelerator-IO/IOController.v|
 !i113 1
-R5
+R6
 n@i@o@controller
 vIOInterface
 !s110 1622064256
@@ -103,7 +103,7 @@ w1622056926
 8E:/kollea/vlsi/DCNN-Accelerator-IO/IOInterface.v
 FE:/kollea/vlsi/DCNN-Accelerator-IO/IOInterface.v
 L0 1
-R3
+R4
 r1
 !s85 0
 31
@@ -111,26 +111,47 @@ r1
 !s107 E:/kollea/vlsi/DCNN-Accelerator-IO/IOInterface.v|
 !s90 -reportprogress|300|-work|DNN|-stats=none|E:/kollea/vlsi/DCNN-Accelerator-IO/IOInterface.v|
 !i113 1
-R5
+R6
 n@i@o@interface
-vtb_GPU
+vRAM
 R1
 !i10b 1
-!s100 ?gz`N9D8YW2b]U8[1Ad8m0
-IDL5;^8Bj:ciAakBRR6SoP0
+!s100 ?cmn?oOi5BnMI@Ml7CH7`3
+IBFdE]3fjf0Z@d5SQ7XbFb0
 R2
 R0
-w1622062072
-8E:/kollea/vlsi/DCNN-Accelerator-IO/testBench.v
-FE:/kollea/vlsi/DCNN-Accelerator-IO/testBench.v
-L0 1
-R3
+w1622120206
+8E:/kollea/vlsi/DCNN-Accelerator-IO/ram.v
+FE:/kollea/vlsi/DCNN-Accelerator-IO/ram.v
+L0 2
+R4
 r1
 !s85 0
 31
-R4
-!s107 E:/kollea/vlsi/DCNN-Accelerator-IO/testBench.v|
-!s90 -reportprogress|300|-work|DNN|-stats=none|E:/kollea/vlsi/DCNN-Accelerator-IO/testBench.v|
-!i113 1
 R5
+!s107 E:/kollea/vlsi/DCNN-Accelerator-IO/ram.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/kollea/vlsi/DCNN-Accelerator-IO/ram.v|
+!i113 1
+o-work work
+n@r@a@m
+vtb_GPU
+R1
+!i10b 1
+!s100 Xmo>c_l6TPIMBP5_chm^=1
+IcFm7]oJWlPVP>MDaUWZMm3
+R2
+R0
+w1622120668
+8E:\kollea\vlsi\DCNN-Accelerator-IO\testBench.v
+FE:\kollea\vlsi\DCNN-Accelerator-IO\testBench.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 E:\kollea\vlsi\DCNN-Accelerator-IO\testBench.v|
+!s90 -reportprogress|300|-work|DNN|-stats=none|E:\kollea\vlsi\DCNN-Accelerator-IO\testBench.v|
+!i113 1
+R6
 ntb_@g@p@u

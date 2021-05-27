@@ -56,8 +56,9 @@ always @(posedge interrupt) begin
           index = index + 1;
         end
         if(counter > Din) 
-          index = index - counter-Din
-
+          index = index - counter+Din;
+          counter = Din;
+        end
         if(counter == Din) begin
           done = 1; // get more data
           currentBit = !currentBit; // invert value

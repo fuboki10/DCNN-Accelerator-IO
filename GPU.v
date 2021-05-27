@@ -58,7 +58,7 @@ always @(negedge clk) begin
           r = $fread(data,file); 
 
           end else begin
-            stage = 2; // go to the next stage
+            stage = 1; // go to the next stage
             commandSent = 0;
             // close the file
             $fclose(file); 
@@ -70,7 +70,7 @@ always @(negedge clk) begin
     end
   
     // Image Stage 
-    else if (stage == 1) begin
+    if (stage == 1) begin
       if (!commandSent) begin
         // read compressed file as binary
         file = $fopen("compressedImage", "rb"); 
@@ -107,7 +107,7 @@ always @(negedge clk) begin
 
 
     // last stage
-    else if (stage == 2) begin
+    if (stage == 2) begin
       if (!commandSent) begin
         load = 0; // send process signal
         interrupt = 1; // send interrupt signal

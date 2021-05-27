@@ -48,19 +48,14 @@ always @(posedge interrupt) begin
         done = 1;
       end else begin
         
-        while (index < 16) begin
+        while (index < 16 && counter != Din) begin
           
           Dout[index] = currentBit;
 
           counter = counter + 1;
           index = index + 1;
         end
-        if(counter > Din) begin
-          index = index - counter+Din;
-          counter = Din;
-          done = 1; // get more data
-          currentBit = !currentBit; // invert value
-        end
+
         if(counter == Din) begin
           done = 1; // get more data
           currentBit = !currentBit; // invert value

@@ -1,10 +1,15 @@
+module ram(clk, enable, data_in, memory_address, data_out);
+    input clk;
+    input enable;
+    input [15:0] data_in;
+    input [15:0] memory_address;
+    reg [15:0] mem [10:0];
+    output reg [15:0] data_out;
 
-module RAM(input clk,input enable, input [15:0]data_in,   input [15:0]memory_address);
-    reg signed [15:0] ram [255:0];
+
     always @(posedge clk ) begin
-        if (enable) begin
-            ram[memory_address] = data_in;     
-        end
+        if (enable) 
+            mem[memory_address] <= data_in;
+            data_out <= mem[memory_address];
     end
 endmodule
-    
